@@ -31,8 +31,13 @@ jobs:
       - run: echo WORLD
       - run: echo $_env_name
 
+<<<<<<< HEAD
   # Exercise: Infrastructure Creation
   # Exercise - Rollback
+=======
+    # Exercise: Infrastructure Creation
+    # Exercise - Rollback
+>>>>>>> 1039602c7a0623637fc30eefbde660ba5c6c70e5
   create_infrastructure:
     docker:
       - image: amazon/aws-cli
@@ -40,11 +45,19 @@ jobs:
       - checkout
       - run:
           name: Create Cloudformation Stack
+<<<<<<< HEAD
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
               --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
               --region us-east-2
+=======
+            command: |
+              aws cloudformation deploy \
+                --template-file template.yml \
+                --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
+                --region us-east-1
+>>>>>>> 1039602c7a0623637fc30eefbde660ba5c6c70e5
       # Fail the job intentionally to simulate an error.
       # Uncomment the line below if you want to fail the current step
       # - run: return 1
@@ -52,7 +65,7 @@ jobs:
 workflows:
   # Name the workflow "welcome"
   my_workflow:
-    # Run the welcome/run job in its own container
+    # Run the welcome/run job in its own container mik
     jobs:
       # - welcome/run
       - configure_infrastructure
