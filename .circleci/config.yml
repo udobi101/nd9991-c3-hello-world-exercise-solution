@@ -6,9 +6,9 @@ Resources:
     Type: 'AWS::EC2::Instance'
     Properties:
       SecurityGroups:
-        - !Ref InstanceSecurityGroup
-      KeyName: first.pem
-      ImageId: 'ami-09e67e426f25ce0d7' # you may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
+        - sg-0e7476d13e457f3e7
+      KeyName: circleCI.pem
+      ImageId: 'ami-07ef7933c011a38e1' # you may need to find out what instance types are available in your region - use https://cloud-images.ubuntu.com/locator/ec2/
       InstanceType: t3.micro
   InstanceSecurityGroup:
     Type: 'AWS::EC2::SecurityGroup'
