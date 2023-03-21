@@ -31,13 +31,8 @@ jobs:
       - run: echo WORLD
       - run: echo $_env_name
 
-<<<<<<< HEAD
   # Exercise: Infrastructure Creation
   # Exercise - Rollback
-=======
-    # Exercise: Infrastructure Creation
-    # Exercise - Rollback
->>>>>>> 1039602c7a0623637fc30eefbde660ba5c6c70e5
   create_infrastructure:
     docker:
       - image: amazon/aws-cli
