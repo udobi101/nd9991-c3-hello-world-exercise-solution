@@ -46,4 +46,4 @@ workflows:
     # Run the welcome/run job in its own container mik
     jobs:
       # - welcome/run
-      - configure_infrastructure
+      - create_infrastructure
