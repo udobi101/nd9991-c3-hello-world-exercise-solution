@@ -33,13 +33,13 @@ jobs:
 
     # Exercise: Infrastructure Creation
     # Exercise - Rollback
-    create_infrastructure:
-      docker:
-        - image: amazon/aws-cli
-      steps:
-        - checkout
-        - run:
-            name: Create Cloudformation Stack
+  create_infrastructure:
+    docker:
+      - image: amazon/aws-cli
+    steps:
+      - checkout
+      - run:
+          name: Create Cloudformation Stack
             command: |
               aws cloudformation deploy \
                 --template-file template.yml \
