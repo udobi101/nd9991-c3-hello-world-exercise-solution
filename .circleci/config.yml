@@ -52,7 +52,7 @@ jobs:
 workflows:
   # Name the workflow "welcome"
   my_workflow:
-    # Run the welcome/run job in its own container
+    # Run the welcome/run job in its own container mik
     jobs:
       # - welcome/run
       - configure_infrastructure
